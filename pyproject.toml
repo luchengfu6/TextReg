@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "textreg"
+version = "0.1.0"
+description = "Adaptive sparse regularization for textual gradient descent."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "TextReg Authors" }]
+keywords = ["llm", "prompt-optimization", "textgrad", "regularization"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Intended Audience :: Science/Research",
+]
+dependencies = [
+    "textgrad>=0.1.6",
+    "numpy",
+    "tqdm",
+    "tiktoken",
+    "python-dotenv",
+    "openai",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/textreg"
+Issues = "https://github.com/your-org/textreg/issues"
+
+[tool.setuptools.packages.find]
+include = ["textreg*"]
+exclude = ["examples*", "results*"]

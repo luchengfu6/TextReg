@@ -1,0 +1,6 @@
+textgrad>=0.1.6
+numpy
+tqdm
+tiktoken
+python-dotenv
+openai
