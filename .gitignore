@@ -6,6 +6,11 @@
 __pycache__/
 *.py[cod]
 *.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Virtual environments
 .venv/
 venv/
 env/
@@ -13,7 +18,7 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-# IDE
+# IDE / Editors
 .vscode/
 .idea/
 
@@ -24,3 +29,8 @@ env/
 # Logs and temp files
 *.log
 *.tmp
+
+# Run artifacts
+results/
+logs/
+*.jsonl
