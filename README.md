@@ -32,7 +32,6 @@ Large language models (LLMs) are highly sensitive to the prompts used to specify
 - 🎯 **First formally defined regularization** for LLM-feedback-based prompt optimization, addressing prompt distributional overfitting
 - 🧩 **Three complementary components**: Dual-Evidence Gradient Purification, Semantic Edit Regularization, Regularization-Guided Prompt Update
 - 📈 **Strong OOD generalization** with up to **+11.8% over TextGrad** and **+16.5% over REVOLVE** on reasoning benchmarks
-- 🔧 **Minimal tuning**: a single hyperparameter ($\tau_C$) controls the entire regularization framework
 
 ## 🧩 The TextReg Framework
 
@@ -156,12 +155,12 @@ The paper evaluates TextReg on **9 reasoning benchmarks** (6 from Big Bench Hard
 | Dataset | Role | Task family | textgrad identifier |
 | :--- | :--- | :--- | :--- |
 | **BBH — Logical Deduction (3 obj)** | source (train + val + test) | Symbolic deduction | `BBH_logical_deduction_three_objects` |
-| **BBH — Logical Deduction (5 / 7 obj)** | OOD eval (harder variants) | Symbolic deduction | `BBH_logical_deduction_{five,seven}_objects` |
+| **BBH — Logical Deduction (5 / 7 obj)** | OOD eval | Symbolic deduction | `BBH_logical_deduction_{five,seven}_objects` |
 | **BBH — Tracking Shuffled Objects (3 obj)** | source | Symbolic deduction | `BBH_tracking_shuffled_objects_three_objects` |
 | **BBH — Tracking Shuffled Objects (5 / 7 obj)** | OOD eval | Symbolic deduction | `BBH_tracking_shuffled_objects_{five,seven}_objects` |
 | **GSM8K** | source | Grade-school math | `GSM8K_DSPy` |
-| **SVAMP** | OOD eval (robustness variant) | Math word problems | (eval-only) |
-| **MultiArith** | OOD eval (multi-step arithmetic) | Math word problems | (eval-only) |
+| **SVAMP** | OOD eval | Math word problems | (eval-only) |
+| **MultiArith** | OOD eval | Math word problems | (eval-only) |
 
 The 3-object BBH variants follow TextGrad's 50 / 100 / 100 train / val / test split.
 
